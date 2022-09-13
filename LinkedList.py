@@ -39,3 +39,11 @@ class LinkedList:
             previousNode.Next = nextNode
         else:
             previousNode.Next = None
+            
+    def ToList(self):
+        array = []
+        node = self
+        while node.Next != None:
+            array.append(node.Next)
+            node = node.Next
+        return array

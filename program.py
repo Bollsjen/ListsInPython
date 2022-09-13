@@ -4,6 +4,9 @@ class Node:
     def __init__(self, data, next):
         self.Data = data
         self.Next = next
+        
+    def __str__(self):
+        return self.Data
 
 class Fisk:
     def __init__(self, data, next):
@@ -25,7 +28,7 @@ class Program:
         
         head.Push(Node("Spade", None))
         self.PrintList(head)
-        
+        self.PrintToList(head)
         
         head.RemoveAt(1)
         self.PrintList(head)
@@ -41,6 +44,13 @@ class Program:
             head = head.Next
 
         print(result)
+        
+    def PrintToList(self, head):
+        stringDims = "["
+        for item in head.ToList():
+            stringDims = stringDims + item.Data + ", "
+        stringDims += "]"
+        print(stringDims)
 
 
 program = Program()

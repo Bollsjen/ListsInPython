@@ -12,8 +12,7 @@ class Fisk:
 
 class Program:
     def Run(self):
-        head = LinkedList()
-        head.Push(Node("Fisk", None))
+        head = LinkedList(Node("Fisk", None))
         head.Push(Node("Torsk", None))
         head.Push(Node("Rødspætte", None))
         head.Push(Fisk("Dette er faktisk en fisk", None))
@@ -21,8 +20,18 @@ class Program:
         head.Pop()
         head.Pop()
         head.Pop()
-        head.Pop()
+        self.PrintList(head)
+        
+        
         head.Push(Node("Spade", None))
+        self.PrintList(head)
+        
+        
+        head.RemoveAt(1)
+        self.PrintList(head)
+        
+        
+        head.RemoveAt(0)
         self.PrintList(head)
 
     def PrintList(self,head):

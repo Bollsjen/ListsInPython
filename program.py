@@ -46,10 +46,11 @@ class Program:
 
         reverse = ReversedLinkedList(ReverseNode("Spætte"))
         reverse.Push(ReverseNode("Gråspurv"))
-        print(reverse.PreviousAt(1).Data)
-        print(reverse.GetAt(1).Data)
-        reverse.RemoveAt(1)
-        print(reverse.GetAt(0).Data)
+        # reverse.RemoveAt(1)
+        self.PrintList(reverse)
+        reverse.Pop()
+        self.PrintList(reverse)
+        
 
     def PrintList(self,head):
         result = ""

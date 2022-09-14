@@ -3,6 +3,10 @@ class LinkedList:
         self.Next = node
         
     def Push(self, newNode):
+        newNode.Next = self.Next
+        self.Next = newNode
+        
+    def Append(self, newNode):
         if self.Next == None:
             self.Next = newNode
             return

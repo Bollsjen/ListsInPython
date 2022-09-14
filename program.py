@@ -26,7 +26,7 @@ class Program:
         head.Push(Node("Torsk"))
         head.Push(Node("Rødspætte"))
         head.Push(Fisk("Dette er faktisk en fisk"))
-        # self.PrintList(head)
+        self.PrintList(head)
         # head.Pop()
         # head.Pop()
         # head.Pop()
@@ -47,7 +47,7 @@ class Program:
         print(head.GetAt(0).Data)
 
         # reverse = ReversedLinkedList(ReverseNode("Spætte"))
-        # reverse.Push(ReverseNode("Gråspurv"))
+        # reverse.Append(ReverseNode("Gråspurv"))
         # # reverse.RemoveAt(1)
         # self.PrintList(reverse)
         # reverse.Pop()

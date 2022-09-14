@@ -10,8 +10,14 @@ class ReversedLinkedList:
         x = self.a
         self.a = self.a.Next
         return x
-
+    
     def Push(self, newNode):
+        newNode.Next = self.Next
+        if self.Next != None:
+            self.Next.Previous = newNode
+        self.Next = newNode
+
+    def Append(self, newNode):
         if self.Next == None:
             self.Next = newNode
             newNode.Previous.Next = self

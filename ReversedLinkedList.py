@@ -27,6 +27,15 @@ class ReversedLinkedList:
         
         node.Next = newNode
         newNode.Previous = previousNode
+        
+    def Pop(self):
+        node = self
+        while node.Next != None:
+            if node.Next.Next == None:
+                node.Next = None
+                return
+            else:
+                node = node.Next
     
     def PreviousAt(self, index):
         node = self
@@ -78,10 +87,6 @@ class ReversedLinkedList:
             i += 1
         if nextNode != None and previousNode != None:
             previousNode.Next = nextNode
-        else:
-            previousNode.Next = None
 
         if previousNode != None and nextNode != None:
             nextNode.Previous = previousNode
-        else:
-            nextNode.Previous = None

@@ -93,6 +93,5 @@ class ReversedLinkedList:
             i += 1
         if nextNode != None and previousNode != None:
             previousNode.Next = nextNode
-
-        if previousNode != None and nextNode != None:
             nextNode.Previous = previousNode
+            

@@ -1,6 +1,6 @@
-from LinkedList import LinkedList
-from ReversedLinkedList import ReversedLinkedList
-from Dictionary import Dictionary
+from cumulations.LinkedList import LinkedList
+from cumulations.ReversedLinkedList import ReversedLinkedList
+from cumulations.Dictionary import Dictionary
 
 class Node:
     def __init__(self, data):

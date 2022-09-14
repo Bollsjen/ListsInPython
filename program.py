@@ -1,5 +1,6 @@
 from LinkedList import LinkedList
 from ReversedLinkedList import ReversedLinkedList
+from Dictionary import Dictionary
 
 class Node:
     def __init__(self, data):
@@ -52,6 +53,20 @@ class Program:
         # self.PrintList(reverse)
         # reverse.Pop()
         # self.PrintList(reverse)
+        
+        numbers = Dictionary({"one": 1, "two": 2})
+        numbers["three"] = 3
+        numbers.update({"four": 4})
+        numbers.setdefault("five", 5)
+        
+        print(numbers)
+        print(numbers.Count())
+        print(numbers.IsEmpty())
+        
+        numbers.Remove("three")
+        print(numbers)
+        print(numbers.Count())
+        print(numbers.IsEmpty())
         
 
     def PrintList(self,head):

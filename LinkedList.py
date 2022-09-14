@@ -40,6 +40,18 @@ class LinkedList:
         else:
             previousNode.Next = None
             
+    def GetAt(self, index):
+        node = self
+        i = 0
+        while node.Next != None:
+            if i == index:
+                return node.Next
+            else:
+                node = node.Next
+            i += 1
+        else:
+            return None
+            
     def ToList(self):
         array = []
         node = self

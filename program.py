@@ -22,10 +22,10 @@ class ReverseNode:
 
 class Program:
     def Run(self):
-        # head = LinkedList(Node("Fisk"))
-        # head.Push(Node("Torsk"))
-        # head.Push(Node("Rødspætte"))
-        # head.Push(Fisk("Dette er faktisk en fisk"))
+        head = LinkedList(Node("Fisk"))
+        head.Push(Node("Torsk"))
+        head.Push(Node("Rødspætte"))
+        head.Push(Fisk("Dette er faktisk en fisk"))
         # self.PrintList(head)
         # head.Pop()
         # head.Pop()
@@ -43,13 +43,15 @@ class Program:
         
         # head.RemoveAt(0)
         # self.PrintList(head)
+        
+        print(head.GetAt(0).Data)
 
-        reverse = ReversedLinkedList(ReverseNode("Spætte"))
-        reverse.Push(ReverseNode("Gråspurv"))
-        # reverse.RemoveAt(1)
-        self.PrintList(reverse)
-        reverse.Pop()
-        self.PrintList(reverse)
+        # reverse = ReversedLinkedList(ReverseNode("Spætte"))
+        # reverse.Push(ReverseNode("Gråspurv"))
+        # # reverse.RemoveAt(1)
+        # self.PrintList(reverse)
+        # reverse.Pop()
+        # self.PrintList(reverse)
         
 
     def PrintList(self,head):
